@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MinPriorityQueueTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-02-15T15:40:40" hostname="glaptop" time="0.004">
+  <properties/>
+  <testcase name="canAddElement" classname="MinPriorityQueueTest" time="0.002"/>
+  <testcase name="queueIsEmptyByDefault" classname="MinPriorityQueueTest" time="0.0"/>
+  <testcase name="queueResizesWhenFull" classname="MinPriorityQueueTest" time="0.0"/>
+  <testcase name="canRemoveElement" classname="MinPriorityQueueTest" time="0.0"/>
+  <testcase name="removeReturnsNullWhenEmpty" classname="MinPriorityQueueTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
