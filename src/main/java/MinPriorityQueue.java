@@ -21,6 +21,7 @@ public class MinPriorityQueue<T extends Comparable<T>> {
         back = 0;
     }
 
+    //testing
     public MinPriorityQueue(int maxCap) {
         capacity = maxCap;
         data = (T[]) new Comparable[capacity];
@@ -41,7 +42,7 @@ public class MinPriorityQueue<T extends Comparable<T>> {
 
     public void add(T elem) {
 
-        if (back == capacity) {
+        if (back == capacity-1) {
             doubleArrayCapacity();
         }
 
@@ -54,21 +55,15 @@ public class MinPriorityQueue<T extends Comparable<T>> {
 
         //start: binary heap add - lec 8 for reference
         int current = back; //current
-        int parentIndex = back/2; //parent
+        int parent = current/2;
 
-        //while the element is less than its parent element then
-        //swap their places
-        while(elem.compareTo(data[parentIndex]) < 0) {
-            swap(parentIndex, current);
-            current = parentIndex;
-            parentIndex = current/2;
+        System.out.println("current at start: " + current);
 
-            //handle case where elem sorted as frontmost element
-            if (parentIndex == 0) {
-                break;
-            }
+        while((elem.compareTo(data[parent]) < 0) && parent > 0) {
+            swap(parent, current);
+            parent = current/2;
         }
-      //if the array was not empty then we have some reorganising to do
+
     }
 
     //i guess this is a reasonable way of doing it
